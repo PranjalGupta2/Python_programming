@@ -1,0 +1,164 @@
+def listfun():
+    print("Hello All,My name is Pranjal Gupta")
+    print("I am a 7th semister student")
+    print("I have to register for 7th semister course")
+    print("there all total 7 courses provided by the college ")
+    sub=["Elective 3","Elective 4","Python programming","Machine learning","capstone project","Internship","Extra Course"]
+    print(sub)
+    print("University is providing 3 courses in Elective 3 and 2 courses in Elective 4")
+    print("These are")
+    elec3=["Quantum computing","Real time systems","Ethical Hacking"]
+    elec4=["cloud computing","optimization techniques"]
+    print(elec3)
+    print(elec4)
+    print("Total subjects are:")
+    sub.remove("Elective 3")
+    sub.remove("Elective 4")
+    sub.extend(elec3)
+    sub.extend(elec4)
+    print(sub)
+    print("I am selecting Quantum computing for elective 3 and cloud computing for elective 4")
+    print("so total subjects that i am registering for are")
+    sub.remove("Real time systems")
+    sub.remove("Ethical Hacking")
+    sub.remove("optimization techniques")
+    print(sub)
+    print("i am also taking 1 extra subject")
+    sub.insert(2,"prepare program")
+    print(sub)
+    sub.sort(reverse=True)
+    print(sub)
+    print("i have cleared 2 subjects, so remaining subjects are")
+    del sub[1]
+    del sub[2]
+    print(sub)
+    print("i have cleared 1 more subjects, so remaining subjects are")
+    sub.remove("Internship")
+    print(sub)
+
+def setfun():
+    A = {0, 2, 4, 6, 8}; 
+    B = {1, 2, 3, 4, 5};
+    print(A)
+    print(B)
+    print("Union :", A | B) 
+    print("Intersection :", A & B) 
+    print("Difference :", A - B) 
+    print("Symmetric difference :", A ^ B)
+    A.add(10)
+    A.add(11)
+    A.remove(0)
+    A.remove(2)
+    B.add(12)
+    B.add(13)
+    print(A)
+    print(B)
+    print("Union :", A | B) 
+    print("Intersection :", A & B) 
+    print("Difference :", A - B) 
+    print("Symmetric difference :", A ^ B)
+
+
+def tuplefun():
+    tup1=(1,2,3,4,5,8,10,11)
+    tup2=(6,7,8,9,10,1,3,8,11)
+    print("Press 1 for union\n2 for intersection\n 3 for add\n 4 for difference")
+    choice=int(input(""))
+    if choice==1:
+        print(tup1|tup2)
+    elif choice==2:
+        print(tup1&tup2)
+    elif choice==3:
+        print(tup1+tup2)
+    elif choice==4:
+        print(tup1-tup2)
+    else:
+        print("wrong input")
+
+    tup1=(1,2,3,4,5,8,10,11)
+    tup2=(6,7,8,9,10,1,3,8,11)
+
+    print("concatenatiuon of two tuples are:")
+    print(tup1+tup2)
+    print("Nesting of Tuples are:")
+    print(tup1,tup2)
+    print("Repetition in Tuples:")
+    tup1= tup1*2
+    print(tup1)
+    print("slicing od tuples are:")
+    print(tup1[1:])
+    print(tup1[::-1])
+    print(tup1[2:4]) 
+    print("length of the tuples are:")
+    print(len(tup1))
+    print(len(tup2))
+    print("Converting list to a Tuple are:")
+    print(tuple(sub))
+          
+def listfun():
+    Dict = {} 
+    print("Empty Dictionary: ") 
+    print(Dict) 
+    Dict = {1: 'Geeks', 2: 'For', 3: 'Geeks'} 
+    print("\nDictionary with the use of Integer Keys: ") 
+    print(Dict) 
+    Dict = {'Name': 'Geeks', 1: [1, 2, 3, 4]} 
+    print("\nDictionary with the use of Mixed Keys: ") 
+    print(Dict) 
+    Dict = dict({1: 'Geeks', 2: 'For', 3:'Geeks'}) 
+    print("\nDictionary with the use of dict(): ") 
+    print(Dict)    
+    Dict = dict([(1, 'Geeks'), (2, 'For')]) 
+    print("\nDictionary with each item as a pair: ") 
+    print(Dict)
+  
+    Dict[0] = 'Geeks'
+    Dict[2] = 'For'
+    Dict[3] = 1
+    print("\nDictionary after adding 3 elements: ") 
+    print(Dict)
+    Dict['Value_set'] = 2, 3, 4
+    print("\nDictionary after adding 3 elements: ") 
+    print(Dict) 
+    Dict[2] = 'Welcome'
+    print("\nUpdated key value: ") 
+    print(Dict) 
+    Dict[5] = {'Nested' :{'1' : 'Life', '2' : 'Geeks'}} 
+    print("\nAdding a Nested Key: ") 
+    print(Dict)
+
+
+    Dict = {1: 'Geeks', 'name': 'For', 3: 'Geeks'}  
+    print("Acessing a element using key:") 
+    print(Dict['name']) 
+    print("Acessing a element using key:") 
+    print(Dict[1])  
+    print("Acessing a element using get:") 
+    print(Dict.get(3))
+
+
+    Dict = { 5 : 'Welcome', 6 : 'To', 7 : 'Geeks', 
+            'A' : {1 : 'Geeks', 2 : 'For', 3 : 'Geeks'}, 
+            'B' : {1 : 'Geeks', 2 : 'Life'}} 
+    print("Initial Dictionary: ") 
+    print(Dict) 
+    del Dict[6] 
+    print("\nDeleting a specific key: ") 
+    print(Dict) 
+    del Dict['A'][2] 
+    print("\nDeleting a key from Nested Dictionary: ") 
+    print(Dict) 
+    Dict.pop(5) 
+    print("\nPopping specific element: ") 
+    print(Dict) 
+    Dict.popitem() 
+    print("\nPops an arbitrary key-value pair: ") 
+    print(Dict) 
+    Dict.clear() 
+    print("\nDeleting Entire Dictionary: ") 
+    print(Dict) 
+    
+listfun()    
+setfun()
+tuplefun()
+listfun()
